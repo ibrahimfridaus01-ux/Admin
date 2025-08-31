@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Chitty - Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4facfe;
+            padding-bottom: 5px;
+        }
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .stat-value {
+            font-weight: bold;
+            color: #4facfe;
+        }
+        .user-item {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .online {
+            border-left: 4px solid #28a745;
+        }
+        .offline {
+            border-left: 4px solid #dc3545;
+        }
+        .btn {
+            background: #4facfe;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .log-item {
+            font-size: 12px;
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Cyber Chitty - Admin Dashboard</h1>
+    <div class="dashboard">
+        <div class="card">
+            <h3>📊 Live Statistics</h3>
+            <div id="liveStats">
+                <div class="stat"><span>Total Users:</span> <span class="stat-value">1</span></div>
+                <div class="stat"><span>Online Now:</span> <span class="stat-value">1</span></div>
+                <div class="stat"><span>Total Messages:</span> <span class="stat-value">0</span></div>
+                <div class="stat"><span>Total Sessions:</span> <span class="stat-value">1</span></div>
+                <div class="stat"><span>Server Uptime:</span> <span class="stat-value">--</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>👥 Online Users</h3>
+            <div id="onlineUsers">
+                <div class="user-item online">
+                    <strong>CyberLord</strong> (btccyberlord@gmail.com)<br>
+                    <small>IP: 127.0.0.1 | Login: Just Now</small>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>📈 Daily Analytics</h3>
+            <div id="dailyAnalytics">
+                <div class="stat"><span>Today:</span> <span class="stat-value">1 user, 0 messages</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>📝 Recent Activity Logs</h3>
+            <div id="activityLogs">
+                <div class="log-item">
+                    <strong>login</strong> - User 1 - Just Now<br>
+                    <small>IP: 127.0.0.1</small>
+                </div>
+            </div>
+            <button class="btn" onclick="exportData()">Export All Data</button>
+        </div>
+    </div>
+    <script>
+        function exportData() {
+            alert("Export is only available on the backend server for now!");
+        }
+        // You can add AJAX calls here to fetch live data from your backend if deployed
+    </script>
+</body>
+</html>
